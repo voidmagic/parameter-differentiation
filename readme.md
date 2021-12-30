@@ -37,8 +37,8 @@ done
 Multilingual NMT:
 ```
 fairseq-train data-bin --user-dir . --max-tokens 4096 --max-update 20000 \
-    --task parameter_differentiation_task --lang-pairs es-en,pt-en  \
-    --arch parameter_differentiation_tiny_model --share-all-embeddings  \
+    --task multilingual_translation --lang-pairs es-en,pt-en  \
+    --arch parameter_differentiation_tiny_model --share-all-embeddings --share-encoders --share-decoders  \
     --lr-scheduler inverse_sqrt --optimizer adam --lr 0.0015 --validate-interval 4
 ```
 
